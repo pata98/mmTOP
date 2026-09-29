@@ -1,0 +1,24 @@
+# mmtop configuration
+interval = 1.0            # seconds between samples
+history_seconds = 300     # how much history to keep for graphs
+default_metrics = ["gpu", "gpu_procs", "cpu_mem", "disk_usage", "net"]
+# available metrics: gpu, gpu_procs, cpu_mem, disk_usage, disk_io, net, ib
+
+# extra prefixes to hide, added to the built-in defaults
+# exclude_mounts = ["/mnt/backup"]
+# exclude_ifaces = ["tailscale"]
+
+# extra options passed to every ssh invocation
+# ssh_options = ["-o", "StrictHostKeyChecking=accept-new"]
+
+[[machines]]
+name = "machine0"
+transport = "local"
+
+[[machines]]
+name = "machine1"
+host = "machine1"
+
+[[machines]]
+name = "machine2"
+host = "machine2"

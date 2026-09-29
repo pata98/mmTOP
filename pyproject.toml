@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mmtop"
+version = "0.1.0"
+description = "Terminal monitor for GPU, disk and network usage across multiple machines"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "textual>=0.60",
+    "tomli>=1.1; python_version < '3.11'",
+]
+
+[project.scripts]
+mmtop = "mmtop.cli:main"
+
+[tool.hatch.build]
+exclude = ["/.config"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mmtop"]
