@@ -2,6 +2,8 @@
 
 A terminal monitor for GPU, CPU/RAM, disk capacity/IO, and network usage across multiple machines.
 
+![mmtop virtual monitoring overview](docs/mmtop-overview.svg)
+
 ## Install
 
 Install it only on the viewer machine (Python 3.9 or newer).
@@ -35,6 +37,8 @@ host = "alias_machine2"
 
 - Run `mmtop --list` to list configured machines.
 - SSH runs with `BatchMode=yes`, so **key-based authentication** (including ssh-agent) is required.
+
+
 
 ## SSH Config
 
